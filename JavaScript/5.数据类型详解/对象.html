@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+  <script>
+    //若干个键值对
+    // var 对象名={
+    //   属性名： 属性值，
+    //   属性名： 属性值，
+    //   属性名： 属性值，
+    // }
+    var person = {
+      name:"wsk",
+      age:25,
+      score:100
+    }
+    console.log(person)
+    // 对象赋值
+    person.name = "wangshukang"
+    //动态删除添加属性
+    // delete是删除  添加就直接person.属性名
+    //判断属性是否存在
+    console.log('age' in person)
+    console.log('toString' in person)//他父类的属性
+    //判断属性是否是自身所有
+    console.log(person.hasOwnProperty('age'))
+    console.log(person.hasOwnProperty('toString'))
+  </script>
+</head>
+<body>
+
+</body>
+</html>

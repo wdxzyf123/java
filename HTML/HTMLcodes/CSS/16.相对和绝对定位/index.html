@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+<!--    相对定位和绝对定位-->
+    <style>
+        body{
+            padding: 20px;
+        }
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid #d09cd4;
+            padding: 0;
+            position: relative;
+        }
+        #first{
+            background-color: #0d2bec;
+            border: 1px solid #c27b4b;
+            /*相对定位：相对原来的位置上下左右*/
+            /*相对定位仍在标准文档流中，原来的位置被保留*/
+            /*position: relative;*/
+            /*top: -10px;*/
+            /*right: 10px;*/
+        }
+        #second{
+            background-color: #FF0000;
+            border: 1px solid #e09116;
+            /*绝对定位： 基于xxx定位，上下左右*/
+            /*父级元素没有定位则默认基于浏览器边缘定位*/
+            /*假设父级元素存在定位，我们通常选择相对于父级元素进行偏移*/
+            position: absolute;
+            right: 300px;
+            top: -10px;
+        }
+        #third{
+            background-color: #0ea2bd;
+            border: 1px solid #b317bf;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+     <div id="first">第一个盒子</div>
+     <div id="second">第二个盒子</div>
+     <div id="third">第三个盒子</div>
+</div>
+</body>
+</html>

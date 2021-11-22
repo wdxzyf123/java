@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+<!--    相对定位和绝对定位-->
+    <style>
+        body{
+            height: 1000px;
+
+
+
+
+
+
+
+
+        }
+        div:nth-of-type(1){
+            width: 100px;
+            height: 100px;
+            background:coral;
+            /*绝对定位：相对浏览器网页中的的位置绝对不变*/
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        div:nth-of-type(2){
+            width: 50px;
+            height: 50px;
+            background:gold;
+            /*固定定位：拖动滑块位置不变*/
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div>div1</div>
+<div>div2</div>
+</body>
+</html>

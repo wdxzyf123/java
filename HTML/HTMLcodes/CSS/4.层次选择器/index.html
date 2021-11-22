@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*p{*/
+        /*    color: #d09cd4;*/
+        /*    background: aquamarine;*/
+        /*}*/
+
+        /*后代选择器*/
+        /*body ul{*/
+        /*    background: coral;*/
+        /*}*/
+        /*子选择器*/
+        /*body>p{*/
+        /*    background: aquamarine;*/
+        /*}*/
+        /*相邻选择器 向下的一个相邻兄弟*/
+        /*.active + p{*/
+        /*    background: chartreuse;*/
+        /*}*/
+        /*通用选择器 向下的所有兄弟*/
+        .active~p{
+            background: #d09cd4;
+        }
+    </style>
+</head>
+<body>
+      <p>po</p>
+      <p class="active">p1</p>
+      <p>p2</p>
+      <p>p3</p>
+      <ul>
+          <li>
+              <p>p4</p>
+          </li>
+          <li>
+              <p>p5</p>
+          </li>
+          <li>
+              <p>p6</p>
+          </li>
+      </ul>
+
+
+
+
+</body>
+</html>
+<!--
+层次选择器
+1.后代选择器
+2.子选择器
+3.相邻选择器
+4.通用选择器
+-->

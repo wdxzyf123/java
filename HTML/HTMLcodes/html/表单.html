@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<h1>注册</h1>
+<!--form
+action:表单提交的地址，可以是网站，也可以是一个请求的处理地址
+method： post,get提交方式 ,get方式不安全，可以在url中看到提交的信息，高效，post安全，可以传输大文件
+-->
+<!--<form action="first.html" method="post" >-->
+<form action="first.html" method="get" >
+<!--    文本输入框input type="text"-->
+<!--    密码框input type="password"-->
+    <p><label for="mark">名字：</label> <input type="text" name="username" value="默认初始值" maxlength="8" size="30" readonly id="mark"></p>
+    <p><label for="mark1">名字：</label> <input type="text" name="username" placeholder="请输入用户名"  required maxlength="8" size="30"  id="mark1"></p>
+    <p>密码： <input type="password" name="pwd" value="123456" hidden></p>
+
+<!--单选框
+    input type= "radio"
+    value：单选框的值
+    name:组
+    checked 默认选择
+-->
+    <p>
+        <input type="radio" value="boy" name="sex" checked disabled/>男
+        <input type="radio" value="girl" name="sex"/>女
+    </p>
+<!--多选框 checkbox
+input type="checkbox"
+-->
+    <p>爱好：
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby" checked>敲代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby">游戏
+    </p>
+<!--按钮-->
+    <p>按钮：
+        <input type="button" name="btn1" value="点击变长">
+<!--image按钮 点击提交-->
+        <input type="image" src="../resources/image/girl.png" width="50" height="50">
+    </p>
+<!--    下拉框，列表框-->
+    <p>
+        <select name="列表名称" id="id1">
+            <option value="china" selected>中国</option>
+            <option value="usa">美国</option>
+            <option value="japan">日本鬼子</option>
+            <option value="three">阿三</option>
+        </select>
+    </p>
+<!--文本域-->
+    <p>
+        <p>反馈：</p>
+        <textarea name="textarea " id="id2" cols="30" rows="10"></textarea>
+
+    </p>
+<!--    文件域-->
+    <input type="file" name="files">
+    <input type="button" value="上传" name="upload">
+    
+<!--    邮件验证-->
+    <p>邮箱：
+        <input type="email" name="email" required>
+    </p>
+<!--   URL验证 -->
+    <p>url:
+        <input type="url" name="url" pattern="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+/^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/或\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)* ">
+    </p>
+<!--    数字-->
+    <p>数字：
+        <input type="number" name="num" max="100" min="10" step="10">
+
+    </p>
+<!--    滑块-->
+    <p>
+        <input type="range" name="voice" min="0" max="100" step="2">
+    </p>
+<!--    搜索框-->
+    <p>搜索：
+        <input type="search" name="search">
+    </p>
+<!--    增强鼠标可用性-->
+    <p>
+<!--        <label for="mark">点击</label>-->
+<!--        <input type="text" id="mark">-->
+    </p>
+    <p>
+        <input type="submit">
+        <input type="reset" value="清空表单">
+    </p>
+</form>
+</body>
+</html>

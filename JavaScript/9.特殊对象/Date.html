@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特殊对象</title>
+  <script>
+    // 内部对象
+    // 标准对象
+    // typeof 123
+    // "number"
+    // typeof 'sss'
+    // "string"
+    // typeof true
+    // "boolean"
+    // typeof NaN
+    // "number"
+    // typeof []
+    // "object"
+    // typeof {}
+    // "object"
+    // typeof Math.abs
+    // "function"
+    // typeof undefined
+    // "undefined"
+// Date
+    var now = new Date();
+    now.getFullYear();//年
+    now.getMonth();//月 0 ~ 11
+    now.getDate();//日
+    now.getDay();//星期
+    now.getHours();
+    now.getMinutes();
+    now.getSeconds();
+
+    now.getTime();//时间戳   全世界统一，从1970年1月1日0：00：00到现在的毫秒数
+    var strictnow = new Date(now.getTime())
+    strictnow.getTime()
+    console.log(strictnow.toLocaleString())
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

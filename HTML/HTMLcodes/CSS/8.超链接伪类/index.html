@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接伪类</title>
+  <style>
+    /*默认的状态*/
+    a{
+      text-decoration: none;
+    }
+    /*鼠标悬浮的状态*/
+    a:hover{
+      text-decoration: underline;
+      color: #d09cd4;
+      font-size: 50px;
+    }
+    /*鼠标按着不放开的状态*/
+    a:active{
+      text-decoration: none;
+      color: coral;
+    }
+    #price{
+      /*颜色 x  y偏移 模糊半径*/
+      text-shadow: red 10px -10px 2px ;
+    }
+  </style>
+
+</head>
+<body>
+<a href="#">
+  <img src="image/shu.jpg" alt="">
+</a>
+
+<p>
+  <a href="#">我是书名</a>
+</p>
+<p>
+  <a href="#">作者：猴子</a>
+</p>
+<p id="price">
+  <a href="#">￥99</a>
+</p>
+</body>
+</html>

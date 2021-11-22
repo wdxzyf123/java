@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MaP和Set</title>
+<!--  es6才出现的-->
+  <script>
+      var map = new Map([['tom', 90],['luxy', 99],['ligu', 100]])
+      console.log(map.get('tom'))
+      map.set('popo',88)
+      console.log(map)
+      // Set无序不重复
+      var set =new Set([3,1,1,1,1,1,1])//es6去重
+      set.add(2)
+      console.log(set)
+      set.delete(1)
+      console.log(set)
+      // has
+      console.log(set.has(2))
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

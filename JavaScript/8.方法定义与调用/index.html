@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法</title>
+<!--  对象： 属性和方法-->
+  <script>
+    var wsk = {
+      name:"wsk",
+      birth:1995,
+      // age: function (){
+      //   var now = new Date().getFullYear();
+      //   return now - this.birth;
+      // }
+      age: getAge
+    }
+    //注意/////    属性wsk.name  方法 wsk.age() 调用方法要带括号
+    // this 的理解：this指向当前对象
+    function  getAge(){
+      var now = new Date().getFullYear();
+      return now - this.birth;
+    }
+    // 单独调用getAge() NaN  window没有birth属性
+    // apply  js中apply可以控制this指向
+    getAge.apply(wsk,[]); //this指向wsk，参数为空
+  </script>
+</head>
+<body>
+
+
+</body>
+</html>

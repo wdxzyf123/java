@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符串</title>
+  <script>
+    "use strict";
+    console.log('a\'')
+    console.log('a\nb') // \n换行
+    console.log('a\tb') // \t制表
+    console.log('\u4e2d') // \U Unicode字符
+    console.log('\x41') // \x ascll字符
+    // 1.多行字符串
+    console.log(`
+    heelo
+    sex
+    lady
+    weld
+    `)
+    // 2.模板字符串
+    let name = "wsk";
+    let age = 3;
+    let msg = `你好，${name}` //EL表达式
+    //3.字符串长度
+    var stu = "wsk"
+    console.log(stu.length)
+    //4.字符串的可变性-不可变
+    // stu[0] = 1
+    console.log(stu[1])
+    //5.大小写转换
+    console.log(stu.toUpperCase())
+    console.log(stu.toLowerCase())
+    //6.indexOf
+    //7.substring 前闭后开
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父级边框塌陷</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<div id="father">
+   <div class="layer1"><img src="image/1.png" alt=""></div>
+   <div class="layer2"><img src="image/2.png" alt=""></div>
+   <div class="layer3"><img src="image/3.png" alt=""></div>
+    <div class="layer4">
+        浮动得盒子可以向左浮动 也可以向右浮动，知道他的边缘碰到框边界
+    </div>
+<!--    方法1一-->
+<!--    <div class="clear"></div>-->
+<!--    方法二在父级元素的style中添加overflow-->
+<!--    方法3在父类添加伪类-->
+</div>
+</body>
+</html>

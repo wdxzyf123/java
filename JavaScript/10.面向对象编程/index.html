@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象</title>
+  <script>
+    // js,java,c# 都有面向对象   js的有点区别
+    // 面向对象：
+    // 类： 模板
+    // 对象：具体的实例
+    // js的面向对象：
+    //1. 原型（__proto__）：类似于继承
+    var user = {
+      name:"feilongzaitian",
+      age:3,
+      run: function (){
+        console.log(this.name + "running...")
+      }
+    }
+    var xiaoming = {
+      name:"xiaoming"
+    }
+    xiaoming.__proto__ = user;//原先的方法（相当指向了user）
+    //2.class继承   ES6引入
+    // es6之前给对象添加一个方法
+    function Student1(name){
+      this.name = name;
+    }
+    //ES6之前给Student新增一个方法
+    Student1.prototype.hello_func = function (){
+      alert('Hello')
+    }
+    //ES6之后===========
+    //定义一个学生类
+    class Student2{
+      constructor(name) {
+        this.name = name;
+      }
+      heollo_func(){
+        alert('Hello')
+      }
+    }
+    var xiaohong = new Student2("小红")
+    //继承
+    class xiaostudent extends Student2{
+      constructor(name,grade) {
+        super(name);
+        this.grade = grade;
+      }
+      mygrade() {
+        alert("我是你爸爸")
+      }
+    }
+    var xiaoqing = new xiaostudent("小青",1)   //写法不同，但还是走的原型__proto__的路子
+    //原型链
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

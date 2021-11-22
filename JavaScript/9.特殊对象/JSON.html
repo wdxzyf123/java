@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <script>
+        // 在js中一切都是对象，任何js支持的类型都可以用json表示
+        // 对象用{}
+        // 数组用[]
+        // 键值对 key:value
+        var user = {
+            name:"wsk",
+            age:3,
+            sex:"男"
+        }
+        //JSON字符串和js对象的转换
+        var json = JSON.stringify(user);
+        var obj = JSON.parse(json)
+        var obj1 = JSON.parse('{"name":"wsk","age":3,"sex":"男"}')//单双引号叉开用
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

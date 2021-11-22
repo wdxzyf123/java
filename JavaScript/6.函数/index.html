@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+  <script>
+    // 定义方式一
+    // function abs(x){
+    //   if(x >=0){
+    //     return x;
+    //   }else{
+    //     return -x;
+    //   }
+    // }
+    // return 后函数结束
+    // 如果没有return，函数执行完毕返回undefined
+
+    //定义方式二
+    // 所有参数组成的数组arguments
+    var abs = function (x){
+      for (let i = 0; i < arguments.length; i++) {
+        console.log(arguments[i])
+      }
+      if(typeof x !== 'number'){
+        throw 'Not a Number!!!'
+      }
+      if(x >=0){
+        return x;
+      }else{
+        return -x;
+      }
+    }
+    // rest  es6新特性 获取当前参数和他后面的参数,用...标识
+    function re(a, b, ...rest){
+      console.log("a=>" + a)
+      console.log("b=>" + b)
+      console.log(rest)
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

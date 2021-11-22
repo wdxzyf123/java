@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // 定义必须参数并赋予测试数据
+  let data = [ // 真实数据需要与此测试数据格式保持一致。
+    {name: '张三', url: 'https://www.baidu.com'},
+    {name: 'zhangsan', url: 'https://www.baidu.com'},
+    {name: 'zhangsan', url: 'https://www.baidu.com'},
+    {name: 'zhangsan', url: 'https://www.baidu.com'}
+  ]
+  let header= {name: '张三', url: '路径'}  // 表头
+
+  //数据处理， 这一部分可以封装为函数
+  data.unshift(header)  // 添加表头
+  // 处理数据为csv的格式
+  let csvString = ""
+  data.map(item => {
+    Object.keys(header).map(key => {
+      let value = item[key]
+      csvString += value+','
+    })
+    csvString += '\r\n'
+  })
+  console.log(csvString)
+  // 保存为csv文件并添加下载按钮
+  csvString = "data:application/csv," + encodeURIComponent(csvString);
+  let btn = document.createElement('a');
+  btn.setAttribute("href", csvString);
+  btn.setAttribute("download", "data.csv");
+  btn.innerText = '下载'
+  // 定义一个修改元素样式的函数
+  function setStyle(dom, styles={}){
+    Object.keys(styles).map(key => {
+      dom.style[key] = styles[key]
+    })
+    return dom
+  }
+  // 设置按钮的样式
+  btn = setStyle(btn, {
+    'position': 'fixed',
+    'top': '10px',
+    'left': '10px',
+    'zIndex': '9999999999',
+    'backgroundColor': 'yellow' // 注意的是，样式名不能有下划线，要合并在一起改为首字母大写列如：  background-color  =>  backgroundColor
+  })
+  document.body.appendChild(btn)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+  <script>
+    var  x = 'xxx'
+    alert(x);
+    alert(window.x)//默认所有的全局变量都自动绑定在window对象
+    // alert()也是window的变量
+    window.alert(x)
+    // js实际上只有一个全局作用域，任何变量（函数也可以视为变量），
+    // 假如没有在函数作用范围内找到，就会向外找，如果在全局作用域都没找到，就会报错RefrenceError
+    // 规范
+    // 由于全局变量都会自动绑定在window上，如果不同的js文件使用了相同的全局变量，冲突如何解决
+    //唯一全局变量
+    var Wsk = {}
+    //定义全局变量
+    Wsk.name = "wangshukang"
+    Wsk.add = function (a,b){
+      return a + b;
+    }
+    // jQuery.   $()
+    //局部作用域 let
+    //常量const关键字  es6之前定义常量 大写字母命名的
+    const PI = 3.14;
+    console.log(PI);
+    // PI = 222;   报错
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .demo a{
+      float: left;
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      background: #d09cd4;
+      text-align: center;
+      color: red;
+      text-decoration: none;
+      margin-left: 5px;
+      font: bold 50px/100px Arial;/*50为字体大小font-size 为行高line-height*/
+    }
+/*属性名 = 属性值(正则)
+  = 绝对等于
+  *= 包含这个元素
+*/
+    /*a[id=first]{*/
+    /*  background: coral;*/
+    /*}*/
+    /*a[class*="item"]{*/
+    /*  background: green;*/
+    /*}*/
+    /*a[target]{*/
+    /*  background: red;*/
+    /*}*/
+    /*以什么开头 ^=*/
+    a[href^=https]{
+      background: red;
+    }
+    /*以什么结尾 $=*/
+    a[href$=jpg]{
+      background: chartreuse;
+    }
+  </style>
+</head>
+<body>
+<p class="demo">
+  <a href="https://www.baidu.com"class="links item first" id="first">1</a>
+  <a href="https://www.kuangstudy.com"class="links item" id="two">2</a>
+  <a href="333.jpg"class="item">3</a>
+  <a href="444.jpg"target="_blank">4</a>
+  <a href="555.doc"target="_blank">5</a>
+  <a href="666.doc"target="_blank" title="liu">6</a>
+  <a href="">7</a>
+  <a href="">8</a>
+  <a href="">9</a>
+  <a href="">10</a>
+
+
+</p>
+</body>
+</html><!--
+层次选择器
+1.后代选择器
+2.子选择器
+3.相邻选择器
+4.通用选择器
+带冒号的时伪类
+-->

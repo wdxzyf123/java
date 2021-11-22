@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字类型</title>
+<!--  数值，文本，图形，音频，视频-->
+<!--  number js不区分小数和整数-->
+<!--  NaN 不是数字-->
+<!--  Infinity 无穷大-->
+<!--  == 类型不一样但值一样也为true-->
+<!--  ===  绝对等于 常用  类型和值都一样才为true-->
+<!--  NaN === NaN-->
+<!--  false-->
+<!--  isNaN(NaN)-->
+<!--  true-->
+<!--  null和undefined-->
+  <script>
+    var arr = [1,2,3,4,5, 'hello', null, true]
+    console.log(arr)
+    var person = {
+      name: "wsk",
+      age:25,
+      tags: ['js','java','web','...']
+    }
+    for (let i = 0; i < 400; i++) {
+        person["pic" + i.toString()] = 0
+    }
+    console.log(person.name)
+    //将数据转为csv需要的格式
+    const csvString = [
+        [" itemID ",
+            "itemLabel "
+        ],
+        ...frame_label.map(item => [
+            item.itemID,
+            item.itemLabel
+        ])
+    ]
+        .map(e => e.join(","))
+        .join('\n')
+
+    // 导出
+    let link = document.createElement("a")
+    let exportContent = '\uFEFF'
+    let blob = new Blob([exportContent+csvString],{
+        type:'text/plain;charset=utrf-8'
+    })
+    link.id = "download-csv"
+    link.setAttribute("href", URL.createObjectURL(blob))
+    link.setAttribute('download', csv_name + ".csv")
+    document.body.appendChild(link)
+    link.click()
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
