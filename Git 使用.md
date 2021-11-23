@@ -77,9 +77,12 @@ git push origin master 　　 将本地仓库的文件push到远程仓库(若 pu
 9. 
 
 ```java
+//最好的办法先换掉http版本
+1.(推荐)直接换掉Git的http版本
+git config --global http.version HTTP/1.1
 // 报错10053
 git config --global http.postBuffer 524288000
 // 443
-// https://blog.csdn.net/richenyunqi/article/details/114984106   看这个博客
+git config --global --unset http.proxy //取消http代理
 ```
 
