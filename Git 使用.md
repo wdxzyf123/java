@@ -74,3 +74,12 @@ git commit -m "commnet" 　　提交更改,添加备注信息(此时将暂存区
 git push origin master 　　 将本地仓库的文件push到远程仓库(若 push 不成功，可加 -f 进行强推操作)
 ```
 
+9. 
+
+```java
+// 报错10053
+git config --global http.postBuffer 524288000
+// 443
+// https://blog.csdn.net/richenyunqi/article/details/114984106   看这个博客
+```
+
